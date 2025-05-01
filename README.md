@@ -12,20 +12,27 @@
    ```bash
    git clone https://github.com/Neatink/DjangoProject
    cd DjangoProject
-    
-    python -m venv venv
-    
-    source venv/bin/activate   # для Linux/macOS
-    venv\Scripts\activate      # для Windows
 
+2. Створіть та активуйте віртуальне середовище:
+   ```bash
+   python -m venv venv
+   
+   source venv/bin/activate   # для Linux/macOS
+   venv\Scripts\activate      # для Windows
+
+3. Застосуйте міграції:
+   ```bash
    python manage.py migrate
 
+4. Запустіть сервер:
+   ```bash
    python manage.py runserver
 
-    http://127.0.0.1:8000/
+5. Перейдіть до:
+   ```bash
+   http://127.0.0.1:8000/
 
 ## 🛠️ Технології:
-
     Python
 
     Django
