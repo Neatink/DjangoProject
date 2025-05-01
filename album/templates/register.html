@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Реєстрація</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.username.label_tag }}
+        {{ form.username }}<br>
+        
+        {{ form.email.label_tag }}
+        {{ form.email }}<br>
+        
+        {{ form.password.label_tag }}
+        {{ form.password }}<br>
+        
+        {{ form.password2.label_tag }}
+        {{ form.password2 }}<br>
+        <button type="submit">Зареєструватися</button>
+        <a href="/login">Вже є аккаунт?</a>
+    </form>
+    <p style="color:red;">
+        {% for error in form.non_field_errors %}
+            {{ error }}
+        {% endfor %}
+</body>
+</html>

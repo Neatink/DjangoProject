@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details of subject</title>
+</head>
+<body>
+    <a href="/subjects"><button type="button" class="btn btn-outline-info">Back</button></a>
+
+    <h1>{{ subject.name }}</h1>
+  
+    <h2><a href = "/subjects/edit/{{subject.id}}">Редагувати</h2></a>
+    <h2><a href="/subjects/delete/{{subject.id}}">Видалити</h2></a>
+
+
+    <p>ID:{{ subject.id }}</p>
+    <p>NAME:{{ subject.name }}</p>
+    <p>COUNT_TEACHERS:{{ subject.count_teachers }}</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+</body>
+</html>

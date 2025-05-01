@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагування вчителя</title>
+</head>
+<body>
+    <a href="/teachers"><button type="button" class="btn btn-outline-info">Back</button></a>
+    <h1>Редагувати вчителя</h1>
+    <form method="post">
+        {% csrf_token %}
+            <div>
+                <h3>{{ form.name.label_tag }}</h3>
+                {{ form.name }}
+                <small>{{ form.name.help_text }}</small>
+                <br>
+                <h3>{{ form.surname.label_tag }}</h3>
+                {{ form.surname }}
+                <small>{{ form.surname.help_text }}</small>
+                <br>
+                <h3>{{ form.subjects_count.label_tag }}</h3>
+                {{ form.subjects_count }}
+                <small>{{ form.subjects_count.help_text }}</small>
+                <br>
+                <h3>{{ form.subject.label_tag }}</h3>
+                {{ form.subject }}
+                <small>{{ form.subject.help_text }}</small>
+            </div>
+        <button type="submit">Зберегти</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+👋Привiт {{ user.get_username }}!

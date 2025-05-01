@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагування студента</title>
+</head>
+<body>
+    <a href="/students"><button type="button" class="btn btn-outline-info">Back</button></a>
+    <h1>Редагування студента</h1>
+    <form method="post">
+        {% csrf_token %}
+            <div>
+                <h3>{{ form.name.label_tag }}</h3>
+                {{ form.name }}
+                <small>{{ form.name.help_text }}</small>
+                <br>
+                <h3>{{ form.surname.label_tag }}</h3>
+                {{ form.surname }}
+                <small>{{ form.surname.help_text }}</small>
+                <br>
+                <h3>{{ form.mail.label_tag }}</h3>
+                {{ form.mail }}<br>
+                <br>
+                <small>{{ form.mail.help_text }}</small>
+                <br>
+                <h3>{{ form.birthday.label_tag }}</h3>
+                {{ form.birthday }}
+                <small>{{ form.birthday.help_text }}</small>
+                <br>
+                <h3>{{ form.clas_id.label_tag }}</h3>
+                {{ form.clas_id }}
+                <small>{{ form.clas_id.help_text }}</small>
+            </div>
+        <button type="submit">Зберегти</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+</body>
+</html>
